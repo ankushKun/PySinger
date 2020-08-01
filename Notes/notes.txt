@@ -1,0 +1,7 @@
+The notes included go from a3 to a6, inclusive.
+Sharps are denoted via a hyphen.
+
+<'a/b/c/d/e/f/g'(note)><'-'(sharp)><'number'(octave)>
+
+a4  : note: a , 4th Octave
+a-4 : note: a-sharp, 4th Octave
