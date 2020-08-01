@@ -1,7 +1,7 @@
 import time
 from tkinter import *
 
-## VARIABLE S
+## VARIABLES
 notes = []
 
 pygame.init()
