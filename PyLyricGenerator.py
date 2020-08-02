@@ -7,9 +7,12 @@ from word_handling import *
 ## { 'WORD' : ['next','possible','words','in','array'] }
 MARKOV = {}
 
-## VARIABLES
+
+
+## VARIABLES (FEEL FREE TO CHANGE THESE)
 WORD_LIMIT = 100
 WORDS_PER_LINE = 10
+
 
 
 word_arr = np.array([])
@@ -18,8 +21,9 @@ for file_ in os.listdir('./data'):
     word_arr = np.append(word_arr,get_words_from_file(f'./data/{file_}'))
 
 
+
 # GENERATE THE MARKOV CHAIN USING DICT AND ARRAYS
-# FROM THE WORDS OBTAINED FROM THE TEXT FILE
+# FROM THE WORDS OBTAINED FROM THE TEXT FILES
 for i in range(len(word_arr)-1):
     prev,nxt=word_arr[i], word_arr[i+1]
     if prev in MARKOV:
@@ -40,8 +44,11 @@ while WORD_LIMIT>=0:
     else : LYRICS+=f"{next_word} "
     prev = next_word
     WORD_LIMIT-=1
-    
 print(LYRICS)
+
+
+
+# SAVE THE LTRICS
 save = input("Do you want to save the generated lyrics? (y/n) : ")
 if save == 'y' or save == 'Y':
     filename = input("Enter file name : ")
