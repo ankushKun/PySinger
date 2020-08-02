@@ -1,13 +1,9 @@
-import time
-from tkinter import *
+import random
+from replacement import *
 
-## VARIABLES
-notes = []
+Markov = {}
 
-pygame.init()
-root = Tk()
-root.title("PyMusicGenerator")
-root.geometry("640x480")
+word_list = get_words_list_from_file('./data/pkmn.txt')
 
-
-root.mainloop()
+for word in word_list[:-1]:
+    print(word)
