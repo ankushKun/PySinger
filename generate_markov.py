@@ -33,10 +33,4 @@ p_out = open('./generated_markov/markov_chain_dict.pickle','wb')
 pickle.dump(MARKOV,p_out)
 p_out.close()
 
-'''
-print('> STORING MARKOV CHAIN IN ./generated_markov')
-os.mkdir('./generated_markov')
-with open('./generated_markov/markov_chain_dict.txt','w') as m:
-    m.write(str(MARKOV))
-'''
-print('> MARKOV CHAIN STORED AS ./generated_markov/markov_chain_dict.txt')
+print('> MARKOV CHAIN STORED AS ./generated_markov/markov_chain_dict.pickle')
