@@ -18,8 +18,9 @@ WORDS_PER_LINE = 10
 
 word_arr = np.array([])
 # GET THE WORDS FROM TEXT FILES IN ./data FOLDER INTO AN ARRAY
-for file_ in os.listdir('./data'):
-    word_arr = np.append(word_arr,get_words_from_file(f'./data/{file_}'))
+for root,dirs,files in os.walk('./data/'):
+    for f in files:
+        word_arr = np.append(word_arr,get_words_from_file(os.path.join(root,f)))
 
 
 
