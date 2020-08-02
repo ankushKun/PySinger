@@ -1,5 +1,5 @@
 ## IMPORTS
-import random
+from random import choice
 import os
 import numpy as np
 from word_handling import *
@@ -38,9 +38,9 @@ for i in range(len(word_arr)-1):
 # PRINTING <WORDS_PER_LINE> NUMBER OF WORDS PER LINE
 LYRICS=""
 WORD_LIMIT-=1
-prev = random.choice(list(MARKOV.keys())) # RANDOM STARTING WORD
+prev = choice(list(MARKOV.keys())) # RANDOM STARTING WORD
 while WORD_LIMIT>=0:
-    next_word = random.choice(MARKOV[prev])
+    next_word = choice(MARKOV[prev])
     if(WORD_LIMIT%WORDS_PER_LINE==0) : LYRICS+=f"{next_word}\n"
     else : LYRICS+=f"{next_word} "
     prev = next_word
@@ -48,7 +48,7 @@ while WORD_LIMIT>=0:
 print(LYRICS)
 
 
-
+'''
 # SAVE THE LTRICS
 save = input("Do you want to save the generated lyrics? (y/n) : ")
 if save == 'y' or save == 'Y':
@@ -58,3 +58,4 @@ if save == 'y' or save == 'Y':
         print(f"{filename}.txt saved in ./generated folder")
 else :
     print("\nEXITING\nBYE BYE")
+'''

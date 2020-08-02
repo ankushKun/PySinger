@@ -1,6 +1,6 @@
 import numpy as np
 # VARIABLES
-puntuations = ['.',',','"',"'",'!','*',';','-','(',')','—']
+puntuations = np.array(['.',',','"',"'",'!','*',';','-','(',')','—'])
 
 # FUNCTION TO REMOVE ALL PUNTUATION FROM A TEXT FILE
 def replace(file_location):
