@@ -1,5 +1,6 @@
 ## IMPORTS
 import numpy as np
+from numpy import *
 import os
 from word_handling import *
 import pickle
@@ -9,13 +10,19 @@ import pickle
 MARKOV = {}
 
 print('> GETTING WORDS INTO AN ARRAY')
+#'''
 word_arr = np.array([])
 # GET THE WORDS FROM TEXT FILES IN ./data FOLDER INTO AN ARRAY
 for root,dirs,files in os.walk('./data/'):
     for f in files:
         if os.path.join(root,f).endswith('.txt'):
             word_arr = np.append(word_arr,get_words_from_file(os.path.join(root,f)))
-print('> DONE')            
+#'''
+#word_arr = np.array(get_words_from_file('./words.txt'))
+print('> DONE') 
+
+
+
 
 print('> GENERATING MARKOV CHAIN')
 # GENERATE THE MARKOV CHAIN USING DICT AND ARRAYS
