@@ -12,6 +12,7 @@ WORD_LIMIT = 100
 WORDS_PER_LINE = 10
 
 def create_lyrics_from_markov():
+    global LYRICS
     global WORD_LIMIT
     ## GET THE STORED MARKOV CHAIN
     MARKOV = {}
@@ -34,8 +35,9 @@ def create_lyrics_from_markov():
 def save_lyrics():
     # SAVE THE LTRICS
     filename = input("Enter file name : ")
-    with open(f"./generated/{filename}.txt",'w') as save:
-        save.write(LYRICS)
-        print(f"{filename}.txt saved in ./generated folder")
+    with open(f"./generated_lyrics/{filename}.txt",'w') as save:
+        save.write(LYRICS.replace('\n',' '))
+        print(f"{filename}.txt saved in ./generated_lyrics folder")
 
 create_lyrics_from_markov()
+save_lyrics()

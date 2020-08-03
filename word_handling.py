@@ -20,7 +20,7 @@ def replace(file_location):
         
 # FUNCTION TO READ ALL TEXT FROM A TEXT FILE
 def read_lyrics_from_file(file_location_):
-    replace(file_location_)
+    #replace(file_location_)               #THIS FUNCTION REPLACE ALL PULTUATIONS FROM THE FILE
     lyrics_str=""
     try:
         with open(file_location_,'r') as lyrics:

@@ -1,0 +1,14 @@
+(P) - "Just a minute now... can anybody remembr one thing I tell them? You're gona be stuck with your baby. Ok, here we go!" 
+ (J) - "What we're gonna do, play jazz with Jetho Tull?." 
+ (P) - "No, Elton John probably at the Roxy" 
+ (J) - "Elton's a good friend of mine?" 
+ (P) - "Well, good, he's got the same name as you. Only you spell it in the front, he spell it on the back... here we go!..." 
+ And you both go the same place... here we go! 
+ (J) - "No, no, no, I refuse... Elton's gonna die young..." 
+ (P) - "Remember the bass drum also... and the one after that, you know, the ending... ok, here we go!", 
+ (J) -"I'm gonna be a 90 year old guru" 
+ (P) - "All right, good!", 
+ (J) - "Ha ha ha"" 
+ (P) - "Ok, I'll make history, you make gurus, here we go!" 
+ (J) - "Phil... I'm gonna write your history so be careful" 
+ (?) - "One, two, three"
