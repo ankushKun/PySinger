@@ -26,7 +26,7 @@ def read_lyrics_from_file(file_location_):
         with open(file_location_,'r') as lyrics:
             for line in lyrics:
                 lyrics_str+=line
-            return lyrics_str
+            return lyrics_str.replace("\n"," ")
     except Exception as e:
         print(e)
         

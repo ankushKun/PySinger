@@ -16,6 +16,7 @@ word_arr = np.array([])
 for root,dirs,files in os.walk('./data/'):
     for f in files:
         if os.path.join(root,f).endswith('.txt'):
+            print(f">> processing {files.index(f)}/{len(files)} : {f}")
             word_arr = np.append(word_arr,get_words_from_file(os.path.join(root,f)))
 #'''
 #word_arr = np.array(get_words_from_file('./words.txt'))
@@ -31,8 +32,10 @@ for i in range(len(word_arr)-1):
     prev,nxt=word_arr[i], word_arr[i+1]
     if prev in MARKOV:
         MARKOV[prev] = np.append(MARKOV[prev],[nxt])
+        print(f">> value added to {prev}  :  {nxt}")
     else:
         MARKOV[prev] = np.array([nxt])
+        print(f">> key created {prev} with value {nxt}")
 print('> MARKOV CHAIN GENERATED')
 
 # SAVE THE MARKOV CHAIN
